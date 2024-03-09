@@ -68,8 +68,8 @@ const OutletPopup = (props: {toggleModal: any, link: any}) => {
   ]
 
   return (
-    <div className='fixed top-0 left-0 w-full h-[100dsvh] z-50 overflow-y-scroll'>
-      <div aria-hidden className='p-4 flex justify-center items-center relative min-h-[100dsvh]'>
+    <div className='fixed top-0 left-0 w-full h-[100svh] z-50 overflow-y-scroll'>
+      <div aria-hidden className='p-4 flex justify-center items-center relative min-h-[100svh]'>
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: .75 }}
@@ -82,38 +82,52 @@ const OutletPopup = (props: {toggleModal: any, link: any}) => {
           initial={{ scale: .8, opacity:0 }}
           animate={{ scale: 1, opacity:1, transition: { type: 'spring', damping: 25, stiffness: 500 } }}
           exit={{ scale: .8, opacity:0, transition: { ease: 'easeOut', duration:.1} }}
-          className='max-w-[88rem] w-auto min-h-96 bg-white rounded-[3rem] relative p-16 max-sm:px-4'
+          className='max-w-[88rem] w-auto min-h-96 bg-white rounded-[4rem] relative p-16 max-sm:p-8 max-sm:pt-16'
         >
           <span className="material-symbols-outlined absolute cursor-pointer right-10 top-10" onClick={ props.toggleModal }>close</span>
-          <p className='txt1 text-center pb-16 max-sm:pb-10'>Pick an outlet</p>
-          <div className='flex flex-wrap gap-x-8 max-md:gap-x-4 gap-y-16 max-sm:gap-y-10 justify-center'>
+          <p className='txt1 text-center pb-16 max-sm:pb-8'>Pick an outlet</p>
+          <div className='flex flex-wrap gap-x-8 max-md:gap-x-4 gap-y-16 max-sm:gap-y-8 justify-center'>
             <motion.div 
               initial='rest'
               whileHover='hover'
               animate='rest'
               onClick={() => window.open(kemang[props.link])}
-              className='w-96 max-lg:w-full cursor-pointer'
+              className='w-96 max-lg:w-full cursor-pointer p-8 rounded-[3rem] border-2'
             >
               <div className='rounded-[2rem] overflow-hidden aspect-square max-lg:aspect-auto max-lg:h-64 relative'>
                 <motion.img variants={imgState} className='w-full h-full object-cover' src="Carousel3.jpg" alt="poster" />
                 <motion.span variants={arrowState} className="material-symbols-sharp text-white absolute top-1/2 left-1/2 text-[18px] mt-[-1px] w-min h-min">arrow_back</motion.span>
               </div>
-              <motion.p variants={descState} className='Libre text-3xl pt-4'>Kemang</motion.p>
-              <motion.p variants={descState} className='pt-2 w-[95%]'>Jl. Benda Raya No.8a - Cilandak Timur - Pasar Minggu - Jakarta Selatan</motion.p>
+              <motion.p variants={descState} className='txt1 text-2xl pt-8'>Kemang</motion.p>
+              <motion.p variants={descState} className='py-2 w-[95%]'>Jl. Benda Raya No.8a - Cilandak Timur - Pasar Minggu - Jakarta Selatan</motion.p>
             </motion.div>
             <motion.div 
               initial='rest'
               whileHover='hover'
               animate='rest'
               onClick={() => window.open(cibis[props.link])}
-              className='w-96 max-lg:w-full cursor-pointer'
+              className='w-96 max-lg:w-full cursor-pointer p-8 rounded-[3rem] border-2'
             >
               <div className='rounded-[2rem] overflow-hidden aspect-square max-lg:aspect-auto max-lg:h-64 relative'>
                 <motion.img variants={imgState} className='w-full h-full object-cover' src="Carousel1.jpg" alt="poster" />
                 <motion.span variants={arrowState} className="material-symbols-sharp text-white absolute top-1/2 left-1/2 text-[18px] mt-[-1px] w-min h-min">arrow_back</motion.span>
               </div>
-              <motion.p variants={descState} className='Libre text-3xl pt-4'>Cibis9</motion.p>
-              <motion.p variants={descState} className='pt-2 w-[95%]'>Jl. Raya Cilandak KKO No.13 - Cilandak Timur - Pasar Minggu - Jakarta Selatan</motion.p>
+              <motion.p variants={descState} className='txt1 text-2xl pt-8'>Cibis9</motion.p>
+              <motion.p variants={descState} className='py-2 w-[95%]'>Jl. Raya Cilandak KKO No.13 - Cilandak Timur - Pasar Minggu - Jakarta Selatan</motion.p>
+            </motion.div>
+            <motion.div 
+              initial='rest'
+              whileHover='hover'
+              animate='rest'
+              onClick={() => window.open(cibis[props.link])}
+              className='w-96 max-lg:w-full cursor-pointer p-8 rounded-[3rem] border-2'
+            >
+              <div className='rounded-[2rem] overflow-hidden aspect-square max-lg:aspect-auto max-lg:h-64 relative'>
+                <motion.img variants={imgState} className='w-full h-full object-cover' src="Carousel2.jpg" alt="poster" />
+                <motion.span variants={arrowState} className="material-symbols-sharp text-white absolute top-1/2 left-1/2 text-[18px] mt-[-1px] w-min h-min">arrow_back</motion.span>
+              </div>
+              <motion.p variants={descState} className='txt1 text-2xl pt-8'>Bangka</motion.p>
+              <motion.p variants={descState} className='py-2 w-[95%]'>Jl. Bangka V No.7 - Cilandak Timur - Pasar Minggu - Jakarta Selatan</motion.p>
             </motion.div>
           </div>
         </motion.div>
