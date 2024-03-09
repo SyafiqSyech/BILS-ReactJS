@@ -31,7 +31,7 @@ const Header = () => {
           <OutletPopup toggleModal={ toggleModal } link={ link }/>
         )}
       </AnimatePresence>
-      <div className='flex flex-col items-center justify-center min-h-[70dvh] max-sm:h-auto max-md:min-h-[80dvh] py-20 max-md:py-16 w-full gap-12 '>
+      <div className='flex flex-col items-center justify-center min-h-[70svh] max-sm:h-auto max-md:min-h-[80svh] py-20 max-md:py-16 w-full gap-12 '>
         <img className='h-96 max-sm:h-64' src={ bilsLogo }/>
         <div className='flex gap-8 max-sm:gap-4 max-sm:flex-col flex-row w-full justify-center'>
           <Button text='Go-Food' link={undefined} toggleModal={ () => toggleModal(0) }/>

@@ -25,8 +25,8 @@ function App() {
       </>
       <div className='h-16 w-full absolute rounded-b-full bg-white'></div>
     </div>
-      <div className='h-[70dvh]'>
-        <div className='h-[70dvh] w-full bg-black fixed bottom-0 z-0 p-16 pt-32 text-white'>
+      <div className='h-[70svh]'>
+        <div className='h-[70svh] w-full bg-black fixed bottom-0 z-0 p-16 pt-32 text-white'>
           <div className='flex flex-wrap justify-center gap-6'>
             <p className='text-xl pt-4 cursor-pointer'>Home </p>
             <p className='text-xl pt-4 cursor-pointer'>About</p>

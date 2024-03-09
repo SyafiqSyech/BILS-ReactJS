@@ -68,8 +68,8 @@ const OutletPopup = (props: {toggleModal: any, link: any}) => {
   ]
 
   return (
-    <div className='fixed top-0 left-0 w-full h-[100dvh] z-50 overflow-y-scroll'>
-      <div aria-hidden className='p-4 flex justify-center items-center relative min-h-[100dvh]'>
+    <div className='fixed top-0 left-0 w-full h-[100dsvh] z-50 overflow-y-scroll'>
+      <div aria-hidden className='p-4 flex justify-center items-center relative min-h-[100dsvh]'>
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: .75 }}
