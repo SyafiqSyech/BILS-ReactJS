@@ -1,0 +1,61 @@
+:root {
+  font-family: "DM Sans", sans-serif;
+  font-size: small;
+  /* line-height: 1.5; */
+  
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+  
+  /* font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+body{
+  min-height: 100dvh;
+}
+
+body.active-modal{
+  overflow-y: hidden;
+}
+
+.txt1{
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: -2px;
+}
+
+.Libre{
+  font-family: "Libre Baskerville", serif;
+  line-height: 1.2;
+}
+
+.shad{
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+}
+
+.hoverUnderline{
+  position: relative;
+}
+
+.hoverUnderline::after{
+  content: '';
+  position: absolute;
+  bottom: 0.1rem;
+  left: 0;
+  width: 100%;
+  height: 0.05rem;
+  background-color: black;
+  transition: .2s;
+  transform-origin: 0;
+  scale: 0 1;
+}
+
+.hoverUnderline:hover::after{
+  transition: .2s;
+  scale: 1 1;
+}
