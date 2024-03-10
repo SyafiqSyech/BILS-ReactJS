@@ -28,34 +28,44 @@ function App() {
       </>
       <>
         <div className='flex flex-wrap gap-x-8 max-md:gap-x-4 gap-y-8 max-sm:gap-y-8 justify-center px-16'>
-          <div className='w-[30rem] p-8 rounded-[3rem] border-2'>
+          <p className='txt1 pt-64 w-full text-center'>Our Locations</p>
+          <div className='w-[30rem] h-min flex flex-col gap-6 p-8 rounded-[3rem] border-2'>
             <div className='rounded-[2rem] overflow-hidden aspect-square'>
               <img className='w-full h-full object-cover' src='Carousel1.jpg' alt="poster" />
             </div>
-            <div className='py-6'>
-              <p className='Libre tracking-[-.1rem] text-6xl'>Cibis 9</p>
-              <p className='txt1 pt-6'>Address</p>
-              <p className=''>Jl. Raya Cilandak KKO No.13 - Cilandak Timur - Pasar Minggu - Jakarta Selatan</p>
-              <p className='txt1 pt-2'>Open hours</p>
-              <p className=''>Monday to Sunday, 12am-18pm</p>
+            <p className='Libre tracking-[-.1rem] text-5xl'>Cibis 9</p>
+            <div>
+              <p className='txt1'>Address</p>
+              <p>
+                Jl. Raya Cilandak KKO No.13, RT.13/RW.5, Cilandak Tim., Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12560
+              </p>
+              <p className='txt1 pt-4'>Open hours</p>
+              <p className=''>
+                Monday to Friday, 8.00am–7.00pm
+              </p>
             </div>
-            <Button text={ 'Maps' } onClick={undefined}/>
+            <Button text={ 'Maps' } onClick={ () => window.open('https://maps.app.goo.gl/EZqvijVeLPvrXDgi9?g_st=ic') }/>
           </div>
-          <div className='w-[30rem] p-8 rounded-[3rem] border-2'>
+          <div className='w-[30rem] h-min flex flex-col gap-6 p-8 rounded-[3rem] border-2'>
             <div className='rounded-[2rem] overflow-hidden aspect-square'>
               <img className='w-full h-full object-cover' src='Carousel2.jpg' alt="poster" />
             </div>
-            <div className='py-6'>
-              <p className='Libre tracking-[-.1rem] text-6xl'>Kemang</p>
-              <p className='txt1 pt-6'>Address</p>
-              <p className=''>Jl. Benda Raya No.8a - Cilandak Timur - Pasar Minggu - Jakarta Selatan</p>
-              <p className='txt1 pt-2'>Open hours</p>
-              <p className=''>Monday to Sunday, 11am-10pm</p>
+            <p className='Libre tracking-[-.1rem] text-5xl'>Kemang</p>
+            <div>
+              <p className='txt1'>Address</p>
+              <p>
+                Jl. Benda Raya No.8a, RT.11/RW.4, Cilandak Tim., Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12560
+              </p>
+              <p className='txt1 pt-4'>Open hours</p>
+              <p className=''>
+                Monday to Thursday, 7.30am–9.00pm<br/>Friday to Sunday, 7.00am–11.00pm
+              </p>
             </div>
-            <Button text={ 'Maps' } onClick={undefined}/>
+            <Button text={ 'Maps' } onClick={ () => window.open('https://maps.app.goo.gl/pw7AoNWmzR8qjbFy8?g_st=ic') }/>
           </div>
         </div>
-        <div className='grid lg:grid-cols-2 p-16 pt-64 max-sm:px-8'>
+      </>
+      <div className='grid lg:grid-cols-2 p-16 pt-64 max-sm:px-8'>
           <p>Contacts</p>
           <div className='flex flex-col gap-8 overflow-hidden'>
             <div>
@@ -76,7 +86,6 @@ function App() {
             <img className=' w-full h-full object-cover' src={ poster } alt="poster" />
           </div> */}
         </div>
-      </>
       <div className='h-16 w-full absolute rounded-b-full bg-white'></div>
     </div>
       <div className='h-[70svh]'>
