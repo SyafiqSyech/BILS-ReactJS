@@ -3,7 +3,6 @@ import './App.css'
 import Header from './sections/Header'
 import Carousel from './sections/Carousel'
 import Button from './components/Button'
-import Outlet from './components/Outlet'
 
 function App() {
 
