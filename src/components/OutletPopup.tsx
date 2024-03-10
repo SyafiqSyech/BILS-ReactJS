@@ -1,61 +1,7 @@
 import { motion } from 'framer-motion'
+import Outlet from './Outlet'
 
 const OutletPopup = (props: {toggleModal: any, link: any}) => {
-
-  const descState = {
-    rest: {
-      color: '#000000',
-      transition: {
-        duration: .2,
-      }
-    },
-    hover: {
-      color: '#ad7953',
-      transition: {
-        duration: .2,
-      }
-    }
-  }
-
-  const arrowState = {
-    rest: {
-      opacity: 0,
-      rotate: '135deg',
-      scale: 10,
-      x: '-160%',
-      y: '60%',
-      transition: {
-        duration: .2,
-      }
-    },
-    hover: {
-      opacity: 1,
-      rotate: '135deg',
-      scale: 10,
-      x: '-50%',
-      y: '-50%',
-      transition: {
-        duration: .2,
-      }
-    }
-  }
-
-  const imgState = {
-    rest: {
-      scale: 1,
-      boxShadow: 'rgba(0, 0, 0, .2) 0px 20px 30px',
-      transition: {
-        duration: .2,
-      }
-    },
-    hover: {
-      scale: 1.2,
-      boxShadow: 'rgba(0, 0, 0, 0) 0px 20px 30px',
-      transition: {
-        duration: .2,
-      }
-    }
-  }
 
   const kemang = [
     /*gofood   */ 'https://gofood.link/a/F6W8b8f',
@@ -87,48 +33,9 @@ const OutletPopup = (props: {toggleModal: any, link: any}) => {
           <span className="material-symbols-outlined absolute cursor-pointer right-10 top-10" onClick={ props.toggleModal }>close</span>
           <p className='txt1 text-center pb-16 max-sm:pb-8'>Pick an outlet</p>
           <div className='flex flex-wrap gap-x-8 max-md:gap-x-4 gap-y-16 max-sm:gap-y-8 justify-center'>
-            <motion.div 
-              initial='rest'
-              whileHover='hover'
-              animate='rest'
-              onClick={() => window.open(kemang[props.link])}
-              className='w-96 max-lg:w-full cursor-pointer p-8 rounded-[3rem] border-2'
-            >
-              <div className='rounded-[2rem] overflow-hidden aspect-square max-lg:aspect-auto max-lg:h-64 relative'>
-                <motion.img variants={imgState} className='w-full h-full object-cover' src="Carousel3.jpg" alt="poster" />
-                <motion.span variants={arrowState} className="material-symbols-sharp text-white absolute top-1/2 left-1/2 text-[18px] mt-[-1px] w-min h-min">arrow_back</motion.span>
-              </div>
-              <motion.p variants={descState} className='txt1 text-2xl pt-8'>Kemang</motion.p>
-              <motion.p variants={descState} className='py-2 w-[95%]'>Jl. Benda Raya No.8a - Cilandak Timur - Pasar Minggu - Jakarta Selatan</motion.p>
-            </motion.div>
-            <motion.div 
-              initial='rest'
-              whileHover='hover'
-              animate='rest'
-              onClick={() => window.open(cibis[props.link])}
-              className='w-96 max-lg:w-full cursor-pointer p-8 rounded-[3rem] border-2'
-            >
-              <div className='rounded-[2rem] overflow-hidden aspect-square max-lg:aspect-auto max-lg:h-64 relative'>
-                <motion.img variants={imgState} className='w-full h-full object-cover' src="Carousel1.jpg" alt="poster" />
-                <motion.span variants={arrowState} className="material-symbols-sharp text-white absolute top-1/2 left-1/2 text-[18px] mt-[-1px] w-min h-min">arrow_back</motion.span>
-              </div>
-              <motion.p variants={descState} className='txt1 text-2xl pt-8'>Cibis9</motion.p>
-              <motion.p variants={descState} className='py-2 w-[95%]'>Jl. Raya Cilandak KKO No.13 - Cilandak Timur - Pasar Minggu - Jakarta Selatan</motion.p>
-            </motion.div>
-            <motion.div 
-              initial='rest'
-              whileHover='hover'
-              animate='rest'
-              onClick={() => window.open(cibis[props.link])}
-              className='w-96 max-lg:w-full cursor-pointer p-8 rounded-[3rem] border-2'
-            >
-              <div className='rounded-[2rem] overflow-hidden aspect-square max-lg:aspect-auto max-lg:h-64 relative'>
-                <motion.img variants={imgState} className='w-full h-full object-cover' src="Carousel2.jpg" alt="poster" />
-                <motion.span variants={arrowState} className="material-symbols-sharp text-white absolute top-1/2 left-1/2 text-[18px] mt-[-1px] w-min h-min">arrow_back</motion.span>
-              </div>
-              <motion.p variants={descState} className='txt1 text-2xl pt-8'>Bangka</motion.p>
-              <motion.p variants={descState} className='py-2 w-[95%]'>Jl. Bangka V No.7 - Cilandak Timur - Pasar Minggu - Jakarta Selatan</motion.p>
-            </motion.div>
+            <Outlet image={'Carousel1.jpg'} name={'Cibis9'} desc={'Jl. Raya Cilandak KKO No.13 - Cilandak Timur - Pasar Minggu - Jakarta Selatan'} onClick={ () => window.open(cibis[props.link]) }/>
+            <Outlet image={'Carousel3.jpg'} name={'Kemang'} desc={'Jl. Benda Raya No.8a - Cilandak Timur - Pasar Minggu - Jakarta Selatan'} onClick={ () => window.open(kemang[props.link]) }/>
+            <Outlet image={'Carousel2.jpg'} name={'Bangka'} desc={'Jl. Bangka V No.7 - Cilandak Timur - Pasar Minggu - Jakarta Selatan'} onClick={ () => window.open(kemang[props.link]) }/>
           </div>
         </motion.div>
       </div>

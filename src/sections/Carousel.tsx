@@ -28,7 +28,7 @@ const Carousel = () => {
             </div>
           ))}
         </motion.div>
-        <p className='w-full text-end pt-8 px-16 pb-64 max-sm:text-center'>Posts from our&nbsp;<span className='hoverUnderline cursor-pointer'>instagram</span></p>
+        <p className='w-full text-end pt-8 px-16 max-sm:text-center'>Posts from our&nbsp;<span className='hoverUnderline cursor-pointer'>instagram</span></p>
       </div>
   )
 }

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-const Button = (props: {text: any, link: any, toggleModal: any}) => {
+const Button = (props: {text: any, onClick: any}) => {
 
   const textState = {
     rest: {
@@ -19,7 +19,7 @@ const Button = (props: {text: any, link: any, toggleModal: any}) => {
 
   const bgState = {
     rest: {
-      y: '100%',
+      y: '103%',
       transition: {
         duration: .2,
       }
@@ -70,15 +70,15 @@ const Button = (props: {text: any, link: any, toggleModal: any}) => {
 
   return (
     <>
-      <div className='flex justify-center'>
+      <div className='flex'>
         <motion.div
           initial='rest'
           whileHover="hover"
           animate="rest"
-          onClick={ props.toggleModal }
-          className='rounded-full relative overflow-hidden cursor-pointer border-[1px] border-black'
+          onClick={ props.onClick  }
+          className='rounded-full relative overflow-hidden cursor-pointer'
         >
-          <motion.div variants={boxState} className='flex justify-center py-3 px-6 text-center'>
+          <motion.div variants={boxState} className='flex justify-center py-3 px-6 text-center border-2 rounded-full'>
             <motion.p variants={textState} className='txt1 z-[2]'>{props.text}</motion.p>
             <motion.span variants={arrowState} className="material-symbols-sharp text-[18px] mt-[-1px] z-[2]">arrow_back</motion.span>
           </motion.div>

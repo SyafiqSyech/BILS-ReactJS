@@ -34,10 +34,10 @@ const Header = () => {
       <div className='flex flex-col items-center justify-center min-h-[70svh] max-sm:h-auto max-md:min-h-[80svh] py-20 max-md:py-16 w-full gap-12 '>
         <img className='h-96 max-sm:h-64' src={ bilsLogo }/>
         <div className='flex gap-8 max-sm:gap-4 max-sm:flex-col flex-row w-full justify-center'>
-          <Button text='Go-Food' link={undefined} toggleModal={ () => toggleModal(0) }/>
-          <Button text='Instagram' link={undefined} toggleModal={ () => window.open('https://www.instagram.com/bilscoffee/?hl=en')}/>
-          <Button text='Menu' link={undefined} toggleModal={ () => toggleModal(1) }/>
-          <Button text='Contacts' link={undefined} toggleModal={ false }/>
+          <div className='flex justify-center'><Button text='Go-Food' onClick={ () => toggleModal(0) }/></div>
+          <div className='flex justify-center'><Button text='Instagram' onClick={ () => window.open('https://www.instagram.com/bilscoffee/?hl=en')}/></div>
+          <div className='flex justify-center'><Button text='Menu' onClick={ () => toggleModal(1) }/></div>
+          <div className='flex justify-center'><Button text='Contacts' onClick={ false }/></div>
           {/* <Button text='Location' link={undefined}/> */}
           {/* <Button text='Contacts' link={undefined}/> */}
         </div>
