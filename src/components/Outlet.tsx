@@ -2,21 +2,6 @@ import { motion } from 'framer-motion'
 
 const Outlet = (props: {image: any, name: any, desc: any, onClick: any}) => {
 
-  const descState = {
-    rest: {
-      color: '#000000',
-      transition: {
-        duration: .2,
-      }
-    },
-    hover: {
-      // color: '#ad7953',
-      transition: {
-        duration: .2,
-      }
-    }
-  }
-
   const arrowState = {
     rest: {
       opacity: 0,
@@ -82,9 +67,8 @@ const Outlet = (props: {image: any, name: any, desc: any, onClick: any}) => {
           <motion.img variants={imgState} className='w-full h-full object-cover' src={ props.image } alt="poster" />
           <motion.span variants={arrowState} className="material-symbols-sharp text-white absolute top-1/2 left-1/2 text-[18px] mt-[-1px] w-min h-min">arrow_back</motion.span>
         </div>
-        {/* <motion.p variants={descState} className='Libre text-4xl pt-4'>{ props.name }</motion.p> */}
-        <motion.p variants={descState} className='Libre text-4xl pt-6'>{ props.name }</motion.p>
-        <motion.p variants={descState} className='py-2 w-[95%]'>{ props.desc }</motion.p>
+        <p className='Libre text-4xl pt-6'>{ props.name }</p>
+        <p className='py-2 w-[95%]'>{ props.desc }</p>
       </motion.div>
     </motion.div>
   )

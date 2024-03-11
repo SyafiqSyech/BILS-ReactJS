@@ -70,7 +70,7 @@ const Button = (props: {text: any, onClick: any}) => {
 
   return (
     <>
-      <div className='flex'>
+      <div className='flex h-min'>
         <motion.div
           initial='rest'
           whileHover="hover"
