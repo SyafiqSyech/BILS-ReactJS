@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Contacts = () => {
   return (
     <div className='px-16 py-16 pt-64 max-md:px-8'>

@@ -4,7 +4,6 @@ import Header from './sections/Header'
 import Carousel from './sections/Carousel'
 import Poster from './sections/Poster'
 import Locations from './sections/Locations'
-import Button from './components/Button'
 import Gofood from './sections/Gofood'
 import Contacts from './sections/Contacts'
 
