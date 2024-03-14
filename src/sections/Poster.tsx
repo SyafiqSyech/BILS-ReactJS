@@ -40,9 +40,7 @@ const Poster = () => {
         </p>
       </div>
       <div className='w-full pt-8 pb-16'>
-        <div className='rounded-[2rem] overflow-hidden shad'>
-          <img className=' w-full h-full object-cover' src={ poster } alt="poster" />
-        </div>
+        <img className=' w-full h-full object-cover rounded-[2rem] shad' src={ poster } alt="poster" />
       </div>
     </div>
   )

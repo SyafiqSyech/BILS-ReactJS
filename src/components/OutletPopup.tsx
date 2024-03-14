@@ -6,11 +6,13 @@ const OutletPopup = (props: {toggleModal: any, link: any}) => {
   const kemang = [
     /*gofood   */ 'https://gofood.link/a/F6W8b8f',
     /*menu     */ 'https://drive.google.com/file/d/1sV0z_NEPfEKf_3HuKugo7NfbhQnsH3X1/view?usp=sharing',
+    /*menu     */ 'https://wa.me/+6287789083706',
   ]
 
   const cibis = [
     /*gofood   */ 'https://gofood.link/u/GGqjd',
     /*menu     */ 'https://drive.google.com/file/d/1c1PZNGjfh61WQmXRuFVqc0iz4Gt8KmJx/view?usp=sharing',
+    /*menu     */ 'https://wa.me/+6281317436103',
   ]
 
   return (

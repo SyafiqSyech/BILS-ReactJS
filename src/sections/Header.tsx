@@ -9,21 +9,20 @@ const Header = () => {
   const [modal, setModal] = useState(false);
   const [link, setLink] = useState(0);
   const [rnd, setRnd] = useState(0);
-  const [what, setWhat] = useState(false);
 
   const toggleModal = (n: number) => {
     setLink(n);
     setModal(!modal);
   }
 
-  if(modal) {
+  if (modal) {
     document.body.classList.add('active-modal')
   } else {
     document.body.classList.remove('active-modal')
   }
-  
+
   var rotateLogoAnimation = {
-    rotate: rnd.toString()+'deg',
+    rotate: rnd.toString() + 'deg',
     transition: {
       type: 'spring',
       stiffness: 200,
@@ -37,12 +36,7 @@ const Header = () => {
     var random = Math.floor(Math.random() * (max - min + 1)) + min;
     var newRnd = rnd > 500 && random > 0 || rnd < -500 && random < 0 ? rnd - random : rnd + random;
     var newnewRnd = newRnd < rnd ? newRnd - 40 : newRnd + 40;
-    console.log(rnd)
-    console.log(newRnd)
-    console.log(newnewRnd)
     setRnd(newnewRnd);
-    console.log(what)
-    setWhat(true);
   }
 
   return (
@@ -52,27 +46,56 @@ const Header = () => {
         onExitComplete={() => null}
       >
         {modal && (
-          <OutletPopup toggleModal={ toggleModal } link={ link }/>
+          <OutletPopup toggleModal={toggleModal} link={link} />
         )}
       </AnimatePresence>
-      <div className='flex flex-col items-center justify-center min-h-[70svh] max-sm:h-auto max-md:min-h-[80svh] py-20 max-md:py-16 w-full gap-12 relative'>
+      <div className='flex flex-col items-center justify-center min-h-[70svh] max-lg:min-h-[80svh] gap-12 py-20 w-full relative'>
         <motion.img
-          initial={ rotateLogoAnimation }
-          animate={ rotateLogoAnimation }
-          onClick={ rotateLogo }
+          initial={rotateLogoAnimation}
+          animate={rotateLogoAnimation}
+          onClick={rotateLogo}
           className='h-96 max-sm:h-64'
-          src={ bilsLogo }
+          src={bilsLogo}
         />
-        {what && (
-          <p id='angry' className='absolute top-1/2 -translate-y-72 max-sm:-translate-y-[19.5rem]'>WHAT HAVE YOU DONE !!!!</p>
-        )}
-        <div className='flex gap-8 max-sm:gap-4 max-sm:flex-col flex-row w-full justify-center'>
-          <div className='flex justify-center'><Button text='Go-Food' onClick={ () => toggleModal(0) }/></div>
-          <div className='flex justify-center'><Button text='Instagram' onClick={ () => window.open('https://www.instagram.com/bilscoffee/?hl=en')}/></div>
-          <div className='flex justify-center'><Button text='Menu' onClick={ () => toggleModal(1) }/></div>
-          <div className='flex justify-center'><Button text='Contacts' onClick={ false }/></div>
-          {/* <Button text='Location' link={undefined}/> */}
-          {/* <Button text='Contacts' link={undefined}/> */}
+        <div className='flex gap-8 max-lg:gap-4 max-lg:flex-col flex-row w-full justify-center'>
+          <div className='flex justify-center'>
+            <Button text='Go-Food' onClick={() => toggleModal(0)} />
+          </div>
+          <div className='flex justify-center'>
+            <Button text='Locations' onClick={() => window.open('https://www.instagram.com/bilscoffee/?hl=en')} />
+          </div>
+          <div className='flex justify-center'>
+            <Button text='Menu' onClick={() => toggleModal(1)} />
+          </div>
+          <div className='flex justify-center'>
+            <Button text='Contacts' onClick={false} />
+          </div>
+        </div>
+        <div className='grid grid-cols-4 gap-4'>
+          <div 
+            className='p-3 -my-3 aspect-square rounded-full items-center cursor-pointer bg-white hover:bg-gray-200 transition-[.2]'
+            onClick={() => window.open('https://www.instagram.com/bilscoffee/?hl=en')}
+          >
+            <img className='w-7 max-lg:w-8' src="instagram.svg" alt="instagram" />
+          </div>
+          <div 
+            className='p-3 -my-3 aspect-square rounded-full items-center cursor-pointer bg-white hover:bg-gray-200 transition-[.2]'
+            onClick={() => window.location.replace('mailto:bilskopi@gmail.com')}
+          >
+            <img className='w-7 max-lg:w-8' src="email.svg" alt="email" />
+          </div>
+          <div 
+            className='p-3 -my-3 aspect-square rounded-full items-center cursor-pointer bg-white hover:bg-gray-200 transition-[.2]'
+            onClick={() => window.open('https://www.facebook.com/bilscoffee/')}
+          >
+            <img className='w-7 max-lg:w-8' src="facebook.svg" alt="facebook" />
+          </div>
+          <div 
+            className='p-3 -my-3 aspect-square rounded-full items-center cursor-pointer bg-white hover:bg-gray-200 transition-[.2]'
+            onClick={() => toggleModal(2)}
+          >
+            <img className='w-7 max-lg:w-8' src="whatsapp.svg" alt="whatsapp" />
+          </div>
         </div>
       </div>
     </>
