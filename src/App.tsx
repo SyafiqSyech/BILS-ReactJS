@@ -4,6 +4,9 @@ import Header from './sections/Header'
 import Carousel from './sections/Carousel'
 import Poster from './sections/Poster'
 import Locations from './sections/Locations'
+import Button from './components/Button'
+import Gofood from './sections/Gofood'
+import Contacts from './sections/Contacts'
 
 function App() {
 
@@ -13,37 +16,42 @@ function App() {
       <Header/>
       <Carousel/>
       <Poster/>
-      <Locations/>
-      <div className='grid md:grid-cols-2 px-16 py-16 pt-64 max-md:px-8'>
-        <p className='Libre text-7xl pb-12 md:hidden'>Contacts</p>
-        <div className='w-full h-full pr-16 max-md:hidden'>
-          <div className='w-full h-full px-20 max-lg:px-16 py-6 rounded-[3rem] flex md:justify-end items-end relative '>
-            <p className='Libre text-5xl text-white z-10'>Contacts</p>
-            <img className='w-full h-full rounded-[3rem] absolute top-0 left-0 object-cover shad' src='Carousel1.jpg' alt="poster" />
+        {/* <div className='px-16 py-16 pt-64 max-md:px-8'>
+          
+          <div className='flex pt-64'>
+            <img className='rounded-[2rem] object-cover w-1/2 aspect-square shad' src='Carousel3.jpg' alt="poster" />
+            <p>a</p>
           </div>
+        </div> */}
+      {/* <>
+        <div className='px-16 py-16 pt-64 max-md:px-8'>
+          <div className='-mb-[max(15vw,20svh)] flex justify-start'>
+            <img className='rounded-[2rem] object-cover w-[max(40vw,50svh)] aspect-square shad' src='Carousel2.jpg' alt="poster" />
+          </div>
+          <div className='-mb-[max(15vw,20svh)] flex justify-end'>
+            <img className='rounded-[2rem] object-cover w-[max(40vw,50svh)] aspect-square shad' src='Carousel1.jpg' alt="poster" />
+          </div>
+          <div className='-mb-[max(15vw,20svh)] flex justify-start'>
+            <img className='rounded-[2rem] object-cover w-[max(40vw,50svh)] aspect-square shad' src='Carousel4.jpg' alt="poster" />
+          </div>
+          <div className='-mb-[max(15vw,20svh)] flex justify-end'>
+            <img className='rounded-[2rem] object-cover w-[max(40vw,50svh)] aspect-square shad' src='Carousel3.jpg' alt="poster" />
+          </div>
+          <p className='w-96'>
+            Who was the first person to think making coffee from an animal's poop would be a great idea? That person is hella freaky if I may say so myself. And now, it's the most expensive kind of coffee. The world works in strange ways.
+          </p>
         </div>
-        <div className='flex flex-col gap-8 overflow-hidden'>
-          <div className='cursor-pointer hoverUnderline thickUnderline w-min'>
-            <p className='txt1 pb-1'>Instagram</p>
-            <p className='Libre text-7xl max-xl:text-6xl max-lg:text-4xl max-md:text-5xl max-sm:text-4xl'>@Bilscoffee</p>
-          </div>
-          <div className='cursor-pointer hoverUnderline thickUnderline w-min'>
-            <p className='txt1 pb-1'>Email</p>
-            <p className='Libre text-7xl max-xl:text-6xl max-lg:text-4xl max-md:text-5xl max-sm:text-4xl'>Bilskopi@gmail.com</p>
-          </div>
-          <div className='cursor-pointer hoverUnderline thickUnderline w-min'>
-            <p className='txt1 pb-1'>Facebook</p>
-            <p className='Libre text-7xl max-xl:text-6xl max-lg:text-4xl max-md:text-5xl max-sm:text-4xl'>Bil's&nbsp;Coffee</p>
-          </div>
-        </div>  
-      </div>
+      </> */}
+      <Locations/>
+      <Gofood/>
+      <Contacts/>
           {/* <div className='rounded-[2rem] overflow-hidden shad w-96 mb-24'>
             <img className=' w-full h-full object-cover' src={ poster } alt="poster" />
           </div> */}
       <div className='h-16 w-full absolute rounded-b-full bg-white'></div>
     </div>
-      <div className='h-[70svh]'>
-        <div className='h-[70svh] w-full bg-black fixed bottom-0 z-0 p-16 pt-32 text-white'>
+      <div className='h-[40svh]'>
+        <div className='h-[40svh] w-full bg-black fixed bottom-0 z-0 p-16 pt-32 text-white'>
           <div className='flex flex-wrap justify-center gap-6'>
             <p className='text-xl pt-4 cursor-pointer'>Home </p>
             <p className='text-xl pt-4 cursor-pointer'>About</p>
