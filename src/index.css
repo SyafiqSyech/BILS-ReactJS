@@ -17,8 +17,12 @@
   -moz-osx-font-smoothing: grayscale; */
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
-  min-height: 100svh;
+  min-height: 100svh; 
 }
 
 body.active-modal{

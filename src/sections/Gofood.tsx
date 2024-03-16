@@ -38,7 +38,7 @@ const Gofood = () => {
   }
 
   return (
-    <div className='grid grid-cols-2 max-md:flex max-md:flex-col px-16 py-16 pt-64 max-md:px-8'>
+    <div className='grid grid-cols-2 max-md:flex max-md:flex-col px-16 max-md:px-8'>
       <div className='md:pr-16 flex flex-col justify-center gap-16 max-lg:gap-12 max-md:gap-8'>
         {/* <p className='w-96'>
           Who was the first person to think making coffee from an animal's poop would be a great idea? That person is freaky if I do say so myself. And now that kind of coffee is one of the most expensive kind. The world <span className='italic text-[#ad7953]'>brews</span> in strange ways.
@@ -65,7 +65,7 @@ const Gofood = () => {
         </motion.p>
         <motion.img 
           variants={ imgState }
-          className='rounded-[2rem] max-h-[50rem] max-md:max-h-[20rem] h-full max-md:w-3/4 shad object-right object-cover relative z-[2]' 
+          className='rounded-[2rem] max-h-[50rem] h-full w-full shad object-right object-cover relative z-[2]' 
           src='Pilot.jpg' 
           alt="pilot"
         />

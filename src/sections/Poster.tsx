@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import poster from '/Poster.jpg'
+import poster from '/Poster1.jpg'
 
 const Poster = () => {
   
@@ -21,7 +21,7 @@ const Poster = () => {
   }
 
   return (
-    <div className='px-16 pt-64 max-md:px-8'>
+    <div className='px-16 max-md:px-8'>
       <div className='w-full relative'>
         <p className='txt2 absolute max-lg:relative lg:top-4 max-lg:pb-4'>
           <motion.span 

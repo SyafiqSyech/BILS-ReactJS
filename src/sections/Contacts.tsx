@@ -18,18 +18,18 @@ const Contacts = () => {
   }
 
   return (
-    <div className='px-16 py-16 mt-52 max-md:px-8 h-[60svh] flex flex-col'>
+    <div className='px-16 py-8 max-md:px-8 flex flex-col' id='contacts'>
       <p className='txt2 text-center pb-12'>Contacts</p>
-      <div className='grid grid-cols-4 h-full gap-16 max-lg:gap-8 max-md:gap-2 max-sm:gap-8 max-sm:grid-cols-2 max-sm:grid-rows-2'>
+      <div className='flex justify-center h-full gap-8 max-lg:gap-4 max-sm:gap-2 max-md:grid max-md:grid-cols-2 max-md:grid-rows-2'>
         <motion.div
           initial='rest'
           whileHover='hover'
           animate='rest'
           variants={boxState}
-          className='cursor-pointer border-2 rounded-[3rem] h-full flex flex-col justify-center items-center' 
+          className='md:aspect-square md:w-72 py-8 cursor-pointer border-2 rounded-[2rem] md:rounded-[3rem] h-full flex flex-col justify-center items-center' 
           onClick={ () => window.open()}
         >
-          <img className='w-20 max-md:w-16 max-sm:w-12' src="instagram.svg" alt="instagram" />
+          <img className='w-20 max-lg:w-16 max-sm:w-12' src="instagram.svg" alt="instagram" />
           <p className='txt1 pt-4 max-sm:pt-2'>Instagram</p>
           <p className=''>@Bilscoffee</p>
         </motion.div>
@@ -38,10 +38,10 @@ const Contacts = () => {
           whileHover='hover'
           animate='rest'
           variants={boxState}
-          className='cursor-pointer border-2 rounded-[3rem] h-full flex flex-col justify-center items-center' 
+          className='md:aspect-square md:w-72 py-8 cursor-pointer border-2 rounded-[2rem] md:rounded-[3rem] h-full flex flex-col justify-center items-center' 
           onClick={ () => window.open()}
         >
-          <img className='w-20 max-md:w-16 max-sm:w-12' src="email.svg" alt="instagram" />
+          <img className='w-20 max-lg:w-16 max-sm:w-12' src="email.svg" alt="instagram" />
           <p className='txt1 pt-4 max-sm:pt-2'>Email</p>
           <p className=''>Bilskopi@gmail.com</p>
         </motion.div>
@@ -50,10 +50,10 @@ const Contacts = () => {
           whileHover='hover'
           animate='rest'
           variants={boxState}
-          className='cursor-pointer border-2 rounded-[3rem] h-full flex flex-col justify-center items-center' 
+          className='md:aspect-square md:w-72 py-8 cursor-pointer border-2 rounded-[2rem] md:rounded-[3rem] h-full flex flex-col justify-center items-center' 
           onClick={ () => window.open()}
         >
-          <img className='w-20 max-md:w-16 max-sm:w-12' src="facebook.svg" alt="instagram" />
+          <img className='w-20 max-lg:w-16 max-sm:w-12' src="facebook.svg" alt="instagram" />
           <p className='txt1 pt-4 max-sm:pt-2'>Facebook</p>
           <p className=''>Bil's Coffee</p>
         </motion.div>
@@ -62,10 +62,10 @@ const Contacts = () => {
           whileHover='hover'
           animate='rest'
           variants={boxState}
-          className='cursor-pointer border-2 rounded-[3rem] h-full flex flex-col justify-center items-center' 
+          className='md:aspect-square md:w-72 py-8 cursor-pointer border-2 rounded-[2rem] md:rounded-[3rem] h-full flex flex-col justify-center items-center' 
           onClick={ () => window.open()}
         >
-          <img className='w-20 max-md:w-16 max-sm:w-12' src="whatsapp.svg" alt="instagram" />
+          <img className='w-20 max-lg:w-16 max-sm:w-12' src="whatsapp.svg" alt="instagram" />
           <p className='txt1 pt-4 max-sm:pt-2'>Whatsapp</p>
           <p className=''>+62Pick-An-Outlet</p>
         </motion.div>

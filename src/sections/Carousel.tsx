@@ -4,6 +4,7 @@ const Carousel = () => {
 
   const carousel = [
     'Carousel1.jpg',
+    'Carousel1.5.jpg',
     'Carousel2.jpg',
     'Carousel3.jpg',
     'Carousel4.jpg',

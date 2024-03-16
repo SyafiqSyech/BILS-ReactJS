@@ -62,13 +62,13 @@ const Header = () => {
             <Button text='Go-Food' onClick={() => toggleModal(0)} />
           </div>
           <div className='flex justify-center'>
-            <Button text='Locations' onClick={() => window.open('https://www.instagram.com/bilscoffee/?hl=en')} />
+            <Button text='Locations' onClick={() => window.location.href = '/#locations'} />
           </div>
           <div className='flex justify-center'>
             <Button text='Menu' onClick={() => toggleModal(1)} />
           </div>
           <div className='flex justify-center'>
-            <Button text='Contacts' onClick={false} />
+            <Button text='Contacts' onClick={() => window.location.href = '/#contacts'} />
           </div>
         </div>
         <div className='grid grid-cols-4 gap-4'>

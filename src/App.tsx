@@ -6,6 +6,7 @@ import Poster from './sections/Poster'
 import Locations from './sections/Locations'
 import Gofood from './sections/Gofood'
 import Contacts from './sections/Contacts'
+import { motion } from 'framer-motion'
 
 function App() {
 
@@ -14,39 +15,50 @@ function App() {
     <div className='bg-white relative z-[1]'>
       <Header/>
       <Carousel/>
+      <div className='p-24 w-full'></div>
       <Poster/>
-        {/* <div className='px-16 py-16 pt-64 max-md:px-8'>
-          
-          <div className='flex pt-64'>
-            <img className='rounded-[2rem] object-cover w-1/2 aspect-square shad' src='Carousel3.jpg' alt="poster" />
-            <p>a</p>
-          </div>
-        </div> */}
+      <div className='p-24 w-full'></div>
       {/* <>
         <div className='px-16 py-16 pt-64 max-md:px-8'>
           <div className='-mb-[max(15vw,20svh)] flex justify-start'>
-            <img className='rounded-[2rem] object-cover w-[max(40vw,50svh)] aspect-square shad' src='Carousel2.jpg' alt="poster" />
+          <img className='rounded-[2rem] object-cover w-[max(40vw,50svh)] aspect-square shad' src='Carousel2.jpg' alt="poster" />
           </div>
           <div className='-mb-[max(15vw,20svh)] flex justify-end'>
-            <img className='rounded-[2rem] object-cover w-[max(40vw,50svh)] aspect-square shad' src='Carousel1.jpg' alt="poster" />
+          <img className='rounded-[2rem] object-cover w-[max(40vw,50svh)] aspect-square shad' src='Carousel1.jpg' alt="poster" />
           </div>
           <div className='-mb-[max(15vw,20svh)] flex justify-start'>
-            <img className='rounded-[2rem] object-cover w-[max(40vw,50svh)] aspect-square shad' src='Carousel4.jpg' alt="poster" />
+          <img className='rounded-[2rem] object-cover w-[max(40vw,50svh)] aspect-square shad' src='Carousel4.jpg' alt="poster" />
           </div>
           <div className='-mb-[max(15vw,20svh)] flex justify-end'>
             <img className='rounded-[2rem] object-cover w-[max(40vw,50svh)] aspect-square shad' src='Carousel3.jpg' alt="poster" />
-          </div>
+            </div>
           <p className='w-96'>
-            Who was the first person to think making coffee from an animal's poop would be a great idea? That person is hella freaky if I may say so myself. And now, it's the most expensive kind of coffee. The world works in strange ways.
+          Who was the first person to think making coffee from an animal's poop would be a great idea? That person is hella freaky if I may say so myself. And now, it's the most expensive kind of coffee. The world works in strange ways.
           </p>
-        </div>
-      </> */}
+          </div>
+        </> */}
       <Locations/>
+      <div className='p-24 w-full'></div>
       <Gofood/>
+      <div className='p-24 w-full'></div>
       <Contacts/>
+      <div className='p-24 w-full'></div>
           {/* <div className='rounded-[2rem] overflow-hidden shad w-96 mb-24'>
             <img className=' w-full h-full object-cover' src={ poster } alt="poster" />
           </div> */}
+      <div className='w-full overflow-hidden'>
+        <motion.div 
+          // initial={{ x: '0vw' }}/
+          animate={{ x: '5vw' }}
+          transition={{ duration: 2, ease: 'linear', repeat: Infinity }}
+          className='flex gap-[1%] justify-center'
+        >
+          {Array(22).fill('').map(() => (
+            <img className='w-[4%]' src='BilsCoffeeLogo2.png'/>
+            ))}
+        </motion.div>
+      </div>
+      <div className='p-24 w-full'></div>
       <div className='h-16 w-full absolute rounded-b-full bg-white'></div>
     </div>
       <div className='h-[40svh]'>
@@ -65,9 +77,7 @@ function App() {
           {/* <p className='text-[16rem] tracking-[-.4rem] Libre text-white flex'>
             Say Hello
           </p> */}
-          {/* <div className='bg-white w-16 h-16 mt-6 rounded-full flex justify-center items-center p-3'>
-            <img className='' src={ bilsSmallLogo }/>
-          </div> */}
+          
         </div>
       </div>
     </>
