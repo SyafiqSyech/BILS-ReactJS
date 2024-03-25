@@ -20,11 +20,11 @@ const OutletPopup = (props: {toggleModal: any, link: any}) => {
       <div aria-hidden className='p-16 max-md:p-8 flex justify-center items-center relative min-h-[100svh]'>
         <motion.div 
           initial={{ opacity: 0 }}
-          animate={{ opacity: .75 }}
+          animate={{ opacity: .3 }}
           exit={{ opacity: 0 }}
           transition={{ type: 'ease', duration: .3 }}
           onClick={ props.toggleModal } 
-          className='bg-black absolute top-0 left-0 w-full min-h-lvh h-full'
+          className='absolute top-0 left-0 w-full min-h-lvh h-full bg-black'
         ></motion.div>
         <motion.div
           initial={{ scale: .8, opacity:0 }}

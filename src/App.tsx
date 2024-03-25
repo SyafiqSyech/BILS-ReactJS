@@ -70,7 +70,7 @@ function App() {
       <div className='p-16 w-full'></div>
       <div className='h-16 w-full absolute rounded-b-full bg-white'></div>
     </div>
-      <Footer/>
+      <Footer toggleModalGo={() => toggleModal(0)} toggleModalMenu={() => toggleModal(1)}/>
     </>
   )
 }
