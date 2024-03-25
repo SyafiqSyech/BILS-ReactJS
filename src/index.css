@@ -30,11 +30,11 @@ body.active-modal{
 }
 
 .txt1{
-  @apply font-bold uppercase mb-[-2px];
+  @apply font-semibold uppercase mb-[-2px];
 }
 
 .txt2{
-  @apply font-bold uppercase mb-[-2px] text-2xl max-lg:text-xl;
+  @apply font-semibold uppercase mb-[-2px] text-xl;
 }
 
 .Libre{
@@ -71,8 +71,8 @@ body.active-modal{
   scale: 1 1;
 }
 
-.thickUnderline.hoverUnderline::after{
-  height: .2rem !important;
+.text-white .hoverUnderline::after{
+  background-color: white !important;
 }
 
 .small{

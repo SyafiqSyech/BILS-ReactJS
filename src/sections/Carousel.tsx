@@ -15,8 +15,8 @@ const Carousel = () => {
     <div className='w-full overflow-hidden pt-10 -mt-10'>
         <motion.div 
           animate={{ x: 'calc(-50%)' }}
-          transition={{ duration: 30, ease: 'linear', repeat: Infinity }}        
-          className='flex gap-12 max-md:gap-4 justify-between w-max px-6 max-md:px-2'
+          transition={{ duration: 40, ease: 'linear', repeat: Infinity }}        
+          className='flex gap-12 max-md:gap-8 justify-between w-max px-6 max-md:px-2'
         >
           {carousel.map((c, i) => (
             <div className='rounded-[2rem] overflow-hidden w-[max(25vw,40svh)] max-lg:w-[max(25vw,30svh)] aspect-square shad' key={i}>
@@ -29,7 +29,9 @@ const Carousel = () => {
             </div>
           ))}
         </motion.div>
-        <p className='w-full text-end pt-8 px-16 max-sm:text-center'>Posts from our&nbsp;<span className='hoverUnderline cursor-pointer'>instagram</span></p>
+        <div className='max-w-[92rem] px-16 max-md:px-8 mx-auto pt-8'>
+          <p className='w-full text-end max-sm:text-center'>Posts from our&nbsp;<span className='hoverUnderline cursor-pointer'>instagram</span></p>
+        </div>
       </div>
   )
 }

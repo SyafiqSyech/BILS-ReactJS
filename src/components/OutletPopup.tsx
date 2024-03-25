@@ -17,27 +17,29 @@ const OutletPopup = (props: {toggleModal: any, link: any}) => {
 
   return (
     <div className='fixed top-0 left-0 w-full h-[100svh] z-50 overflow-y-scroll'>
-      <div aria-hidden className='p-4 flex justify-center items-center relative min-h-[100svh]'>
+      <div aria-hidden className='p-16 max-md:p-8 flex justify-center items-center relative min-h-[100svh]'>
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: .75 }}
           exit={{ opacity: 0 }}
           transition={{ type: 'ease', duration: .3 }}
           onClick={ props.toggleModal } 
-          className='bg-black absolute top-0 left-0 w-full h-full'
+          className='bg-black absolute top-0 left-0 w-full min-h-lvh h-full'
         ></motion.div>
         <motion.div
           initial={{ scale: .8, opacity:0 }}
           animate={{ scale: 1, opacity:1, transition: { type: 'spring', damping: 25, stiffness: 500 } }}
           exit={{ scale: .8, opacity:0, transition: { ease: 'easeOut', duration:.1} }}
-          className='max-w-[88rem] w-auto min-h-96 bg-white rounded-[4rem] relative p-16 max-sm:p-8 max-sm:pt-16'
+          className='max-w-[88rem] min-h-96 bg-white rounded-[4rem] relative p-16 max-lg:p-8 max-sm:pt-16'
         >
           <span className="material-symbols-outlined absolute cursor-pointer right-10 top-10" onClick={ props.toggleModal }>close</span>
-          <p className='txt1 text-center pb-16 max-sm:pb-8'>Pick an outlet</p>
-          <div className='flex flex-wrap gap-x-8 max-md:gap-x-4 gap-y-16 max-sm:gap-y-8 justify-center'>
-            <Outlet image={'Cibis2.jpg'} name={'Cibis9'} desc={'Jl. Raya Cilandak KKO No.13 - Cilandak Timur - Pasar Minggu - Jakarta Selatan'} onClick={ () => window.open(cibis[props.link]) }/>
-            <Outlet image={'Kemang4.jpg'} name={'Kemang'} desc={'Jl. Benda Raya No.8a - Cilandak Timur - Pasar Minggu - Jakarta Selatan'} onClick={ () => window.open(kemang[props.link]) }/>
-            {/* <Outlet image={'Carousel4.jpg'} name={'Bangka'} desc={'Jl. Bangka V No.7 - Cilandak Timur - Pasar Minggu - Jakarta Selatan'} onClick={ () => window.open(kemang[props.link]) }/> */}
+          <p className='txt1 text-center pb-16 max-lg:pt-8 max-md:pb-8 max-sm:pt-0'>Pick a location</p>
+          <div className=''>
+            <div className='flex flex-wrap gap-x-8 max-md:gap-x-4 gap-y-16 max-sm:gap-y-8 justify-center'>
+              <Outlet image={'Cibis2.jpg'} name={'Cibis9'} desc={'Jl. Raya Cilandak KKO No.13 - Cilandak Timur - Pasar Minggu - Jakarta Selatan'} onClick={ () => window.open(cibis[props.link]) }/>
+              <Outlet image={'Kemang4.jpg'} name={'Kemang'} desc={'Jl. Benda Raya No.8a - Cilandak Timur - Pasar Minggu - Jakarta Selatan'} onClick={ () => window.open(kemang[props.link]) }/>
+              {/* <Outlet image={'Carousel4.jpg'} name={'Bangka'} desc={'Jl. Bangka V No.7 - Cilandak Timur - Pasar Minggu - Jakarta Selatan'} onClick={ () => window.open(kemang[props.link]) }/> */}
+            </div>
           </div>
         </motion.div>
       </div>

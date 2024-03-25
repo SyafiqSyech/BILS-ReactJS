@@ -21,21 +21,21 @@ const Poster = () => {
   }
 
   return (
-    <div className='px-16 max-md:px-8'>
+    <div className='max-w-[92rem] px-16 max-md:px-8 mx-auto'>
       <div className='w-full relative'>
         <p className='txt2 absolute max-lg:relative lg:top-4 max-lg:pb-4'>
           <motion.span 
             initial='rest'
             whileHover='hover'
             animate='rest'
-            className='hoverUnderline thickUnderline cursor-pointer'
+            className='hoverUnderline cursor-pointer'
           >
             <motion.p variants={ gojekState } className='absolute right-0 -top-10 small leading-snug'>*gojek<br/>&emsp;v</motion.p>
             Grab
           </motion.span>
           &nbsp;our coffee
         </p>
-        <p className='Libre max-sm:text-7xl max-lg:text-8xl text-[9rem]'>
+        <p className='Libre text-8xl max-sm:text-7xl'>
           <span className='max-lg:hidden'>&emsp;&emsp;&emsp;</span>Because life is too short for bad <span className='italic text-[#ad7953]'>coffee</span>.
         </p>
       </div>

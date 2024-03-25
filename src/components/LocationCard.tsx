@@ -20,7 +20,7 @@ const LocationCard = (props: {image: any, name: any, address: any, hours: any, w
 
   return (
     <div className='w-[30rem] max-lg:w-[24rem] max-md:w-full max-md:max-w-[32rem] h-min flex flex-col gap-6 p-8 rounded-[3rem] border-2'>
-      <div className='rounded-[2rem] max-md:aspect-video overflow-hidden aspect-square'>
+      <div className='rounded-[2rem] overflow-hidden aspect-square'>
         <motion.img
           initial='rest'
           whileHover='hover'

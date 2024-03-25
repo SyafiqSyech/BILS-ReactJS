@@ -19,7 +19,7 @@ const Contacts = () => {
 
   return (
     <div className='px-16 py-8 max-md:px-8 flex flex-col' id='contacts'>
-      <p className='txt2 text-center pb-12'>Contacts</p>
+      <p className='txt2 text-center pb-16'>Contacts</p>
       <div className='flex justify-center h-full gap-8 max-lg:gap-4 max-sm:gap-2 max-md:grid max-md:grid-cols-2 max-md:grid-rows-2'>
         <motion.div
           initial='rest'

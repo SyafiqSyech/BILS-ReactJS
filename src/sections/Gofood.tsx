@@ -1,7 +1,7 @@
 import Button from '../components/Button'
 import { motion } from 'framer-motion'
 
-const Gofood = () => {
+const Gofood = (props: {toggleModalGo: any}) => {
 
   const textState = {
     rest: {
@@ -38,17 +38,16 @@ const Gofood = () => {
   }
 
   return (
-    <div className='grid grid-cols-2 max-md:flex max-md:flex-col px-16 max-md:px-8'>
+    <div className='max-w-[92rem] px-16 max-md:px-8 mx-auto grid grid-cols-2 max-md:flex max-md:flex-col'>
       <div className='md:pr-16 flex flex-col justify-center gap-16 max-lg:gap-12 max-md:gap-8'>
         {/* <p className='w-96'>
           Who was the first person to think making coffee from an animal's poop would be a great idea? That person is freaky if I do say so myself. And now that kind of coffee is one of the most expensive kind. The world <span className='italic text-[#ad7953]'>brews</span> in strange ways.
         </p> */}
         {/* <p className='txt2'>Lorem Ipsum Dolor</p> */}
-        <p className='Libre text-9xl max-xl:text-8xl max-lg:text-7xl max-md:text-8xl max-sm:text-7xl'>Sip and savor our <span className='italic text-[#ad7953]'>coffee</span> on the&nbsp;go.</p>
+        <p className='Libre text-8xl max-lg:text-7xl max-md:text-8xl max-sm:text-7xl'>Sip and savor our <span className='italic text-[#ad7953]'>coffee</span> on the&nbsp;go.</p>
         <div className='flex items-center gap-2 max-md:hidden'>
-          <p className='txt1'>make a</p>
-          <Button text='Go-Food' onClick={ undefined }/>
-          <p className='txt1'>order ?</p>
+          <Button text='Go-Food' onClick={ props.toggleModalGo }/>
+          <p className='txt1'> our coffee ?</p>
         </div>
       </div>
       <motion.div
@@ -71,9 +70,8 @@ const Gofood = () => {
         />
       </motion.div>
       <div className='flex items-center gap-2 w-full pt-10 md:hidden'>
-        <p className='txt1'>make a</p>
-        <Button text='Go-Food' onClick={ undefined }/>
-        <p className='txt1'>order ?</p>
+        <Button text='Go-Food' onClick={ () => props.toggleModalGo }/>
+        <p className='txt1'>our coffee ?</p>
       </div>
     </div>
   )
