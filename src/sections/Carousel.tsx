@@ -4,7 +4,6 @@ const Carousel = () => {
 
   const carousel = [
     'Carousel1.jpg',
-    'Carousel1.5.jpg',
     'Carousel2.jpg',
     'Carousel3.jpg',
     'Carousel4.jpg',
@@ -30,7 +29,7 @@ const Carousel = () => {
           ))}
         </motion.div>
         <div className='max-w-[92rem] px-16 max-md:px-8 mx-auto pt-8'>
-          <p className='w-full text-end max-sm:text-center'>Posts from our&nbsp;<span className='hoverUnderline cursor-pointer'>instagram</span></p>
+          <p className='w-full text-end max-sm:text-center'>Posts from our&nbsp;<span className='hoverUnderline cursor-pointer' onClick={ () => window.open('https://www.instagram.com/bilscoffee/?hl=en') }>instagram</span></p>
         </div>
       </div>
   )

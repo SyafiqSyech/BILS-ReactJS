@@ -43,12 +43,14 @@ const Outlet = (props: {image: any, name: any, desc: any, onClick: any}) => {
   const imgState = {
     rest: {
       scale: 1,
+      filter: 'blur(0px)',
       transition: {
         duration: .2,
       }
     },
     hover: {
-      scale: 1.2,
+      scale: 1.1,
+      filter: 'blur(3px)',
       transition: {
         duration: .2,
       }

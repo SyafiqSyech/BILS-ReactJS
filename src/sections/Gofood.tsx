@@ -70,7 +70,7 @@ const Gofood = (props: {toggleModalGo: any}) => {
         />
       </motion.div>
       <div className='flex items-center gap-2 w-full pt-10 md:hidden'>
-        <Button text='Go-Food' onClick={ () => props.toggleModalGo }/>
+        <Button text='Go-Food' onClick={ props.toggleModalGo }/>
         <p className='txt1'>our coffee ?</p>
       </div>
     </div>

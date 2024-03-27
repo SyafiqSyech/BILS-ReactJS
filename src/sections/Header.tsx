@@ -9,6 +9,7 @@ const Header = (props: { toggleModalGo: any, toggleModalMenu: any, toggleModalWa
 
   var rotateLogoAnimation = {
     rotate: rnd.toString() + 'deg',
+    scale: rnd === 0 ? 1 : .8,
     transition: {
       type: 'spring',
       stiffness: 200,
@@ -22,6 +23,7 @@ const Header = (props: { toggleModalGo: any, toggleModalMenu: any, toggleModalWa
     var random = Math.floor(Math.random() * (max - min + 1)) + min;
     var newRnd = rnd > 500 && random > 0 || rnd < -500 && random < 0 ? rnd - random : rnd + random;
     var newnewRnd = newRnd < rnd ? newRnd - 40 : newRnd + 40;
+    if((newnewRnd > -15 && newnewRnd < 15)) newnewRnd = 0
     setRnd(newnewRnd);
   }
 
@@ -40,13 +42,13 @@ const Header = (props: { toggleModalGo: any, toggleModalMenu: any, toggleModalWa
             <Button text='Go-Food' onClick={ props.toggleModalGo } />
           </div>
           <div className='flex justify-center'>
-            <Button text='Locations' onClick={() => window.location.href = '/#locations'} />
+            <Button text='Locations' onClick={ () => window.location.href = '/#locations' } />
           </div>
           <div className='flex justify-center'>
             <Button text='Menu' onClick={ props.toggleModalMenu } />
           </div>
           <div className='flex justify-center'>
-            <Button text='Contacts' onClick={() => window.location.href = '/#contacts'} />
+            <Button text='Contacts' onClick={ () => window.location.href = '/#contacts' } />
           </div>
         </div>
         <div className='grid grid-cols-4 gap-4'>

@@ -46,7 +46,7 @@ function App() {
       <div className='h-64 w-full'></div>
       <Gofood toggleModalGo={() => toggleModal(0)}/>
       <div className='h-64 w-full'></div>
-      <Contacts/>
+      <Contacts toggleModalWa={() => toggleModal(2)}/>
       <div className='h-64 w-full'></div>
       {/* <>
         <div className='px-16 py-16 pt-64 max-md:px-8'>
@@ -64,11 +64,16 @@ function App() {
             </div>
             </div>
           </> */}
-      <p className='m-auto w-96'>
-      Who was the first person to think making coffee from an animal's poop would be a great idea? That person is hella freaky if I may say so myself. And now, it's the most expensive kind of coffee. The world works in strange ways.
-      </p>
+      <div className='max-w-[50rem] px-16 max-md:px-8 mx-auto pt-8'>
+        <p className='Libre text-8xl max-sm:text-6xl pb-8'>
+          About Bil's
+        </p>
+        <p className=''>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
       <div className='p-16 w-full'></div>
-      <div className='h-16 w-full absolute rounded-b-full bg-white'></div>
+      <div className='h-16 w-full absolute rounded-b-full bg-white shad'></div>
     </div>
       <Footer toggleModalGo={() => toggleModal(0)} toggleModalMenu={() => toggleModal(1)}/>
     </>
