@@ -9,7 +9,6 @@ import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import OutletPopup from './components/OutletPopup'
 import Footer from './sections/Footer'
-import Button from './components/Button'
 
 function App() {
   
