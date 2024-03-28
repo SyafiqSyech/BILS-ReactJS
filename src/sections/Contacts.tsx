@@ -29,7 +29,7 @@ const Contacts = (props: { toggleModalWa: any }) => {
           className='md:aspect-square md:w-72 py-8 cursor-pointer border-2 rounded-[2rem] md:rounded-[3rem] h-full max-md:h-64 flex flex-col justify-center items-center' 
           onClick={ () => window.open('https://www.instagram.com/bilscoffee/?hl=en') }
         >
-          <img className='w-20 max-lg:w-16 max-sm:w-12' src="instagram.svg" alt="instagram" />
+          <img className='w-20 max-lg:w-16 max-sm:w-12 select-none' src="instagram.svg" alt="instagram" />
           <p className='txt1 pt-4 max-sm:pt-2'>Instagram</p>
           <p className=''>@Bilscoffee</p>
         </motion.div>
@@ -41,7 +41,7 @@ const Contacts = (props: { toggleModalWa: any }) => {
           className='md:aspect-square md:w-72 py-8 cursor-pointer border-2 rounded-[2rem] md:rounded-[3rem] h-full max-md:h-64 flex flex-col justify-center items-center' 
           onClick={ () => window.location.replace('mailto:bilskopi@gmail.com') }
         >
-          <img className='w-20 max-lg:w-16 max-sm:w-12' src="email.svg" alt="instagram" />
+          <img className='w-20 max-lg:w-16 max-sm:w-12 select-none' src="email.svg" alt="instagram" />
           <p className='txt1 pt-4 max-sm:pt-2'>Email</p>
           <p className='max-sm:text-sm'>Bilskopi@gmail.com</p>
         </motion.div>
@@ -53,7 +53,7 @@ const Contacts = (props: { toggleModalWa: any }) => {
           className='md:aspect-square md:w-72 py-8 cursor-pointer border-2 rounded-[2rem] md:rounded-[3rem] h-full max-md:h-64 flex flex-col justify-center items-center' 
           onClick={ () => window.open('https://www.facebook.com/bilscoffee/') }
         >
-          <img className='w-20 max-lg:w-16 max-sm:w-12' src="facebook.svg" alt="instagram" />
+          <img className='w-20 max-lg:w-16 max-sm:w-12 select-none' src="facebook.svg" alt="instagram" />
           <p className='txt1 pt-4 max-sm:pt-2'>Facebook</p>
           <p className=''>Bil's Coffee</p>
         </motion.div>
@@ -65,7 +65,7 @@ const Contacts = (props: { toggleModalWa: any }) => {
           className='md:aspect-square md:w-72 py-8 cursor-pointer border-2 rounded-[2rem] md:rounded-[3rem] h-full max-md:h-64 flex flex-col justify-center items-center' 
           onClick={ props.toggleModalWa }
         >
-          <img className='w-20 max-lg:w-16 max-sm:w-12' src="whatsapp.svg" alt="instagram" />
+          <img className='w-20 max-lg:w-16 max-sm:w-12 select-none' src="whatsapp.svg" alt="instagram" />
           <p className='txt1 pt-4 max-sm:pt-2'>Whatsapp</p>
           <p className=''>+62Pick-An-Outlet</p>
         </motion.div>

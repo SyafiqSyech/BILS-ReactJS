@@ -64,7 +64,7 @@ const Gofood = (props: {toggleModalGo: any}) => {
         </motion.p>
         <motion.img 
           variants={ imgState }
-          className='rounded-[2rem] max-h-[50rem] h-full w-full shad object-right object-cover relative z-[2]' 
+          className='rounded-[2rem] max-h-[50rem] h-full w-full shad object-right object-cover relative z-[2] select-none' 
           src='Pilot.jpg' 
           alt="pilot"
         />

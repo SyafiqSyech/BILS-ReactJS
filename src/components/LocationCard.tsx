@@ -49,7 +49,7 @@ const LocationCard = (props: {image: any, name: any, address: any, hours: any, w
         initial='rest'
         whileHover='hover'
         animate='rest'
-        className='rounded-[2rem] overflow-hidden aspect-square relative cursor-pointer'
+        className='rounded-[2rem] overflow-hidden aspect-square relative cursor-pointer select-none'
         onClick={ props.mapsClick }
       >
         <motion.img

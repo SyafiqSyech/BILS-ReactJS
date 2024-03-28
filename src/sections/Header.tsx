@@ -34,7 +34,7 @@ const Header = (props: { toggleModalGo: any, toggleModalMenu: any, toggleModalWa
           initial={rotateLogoAnimation}
           animate={rotateLogoAnimation}
           onClick={rotateLogo}
-          className='h-96 max-sm:h-64'
+          className='h-96 max-sm:h-64 select-none	'
           src={bilsLogo}
         />
         <div className='flex gap-8 max-lg:gap-4 max-lg:flex-col flex-row w-full justify-center'>
@@ -56,25 +56,25 @@ const Header = (props: { toggleModalGo: any, toggleModalMenu: any, toggleModalWa
             className='p-3 -my-3 aspect-square rounded-full items-center cursor-pointer bg-white hover:bg-gray-200 transition-[.2]'
             onClick={ () => window.open('https://www.instagram.com/bilscoffee/?hl=en') }
           >
-            <img className='w-7 max-lg:w-8' src="instagram.svg" alt="instagram" />
+            <img className='w-7 max-lg:w-8 select-none' src="instagram.svg" alt="instagram" />
           </div>
           <div 
             className='p-3 -my-3 aspect-square rounded-full items-center cursor-pointer bg-white hover:bg-gray-200 transition-[.2]'
             onClick={ () => window.location.replace('mailto:bilskopi@gmail.com') }
           >
-            <img className='w-7 max-lg:w-8' src="email.svg" alt="email" />
+            <img className='w-7 max-lg:w-8 select-none' src="email.svg" alt="email" />
           </div>
           <div 
             className='p-3 -my-3 aspect-square rounded-full items-center cursor-pointer bg-white hover:bg-gray-200 transition-[.2]'
             onClick={ () => window.open('https://www.facebook.com/bilscoffee/') }
           >
-            <img className='w-7 max-lg:w-8' src="facebook.svg" alt="facebook" />
+            <img className='w-7 max-lg:w-8 select-none' src="facebook.svg" alt="facebook" />
           </div>
           <div 
             className='p-3 -my-3 aspect-square rounded-full items-center cursor-pointer bg-white hover:bg-gray-200 transition-[.2]'
             onClick={ props.toggleModalWa }
           >
-            <img className='w-7 max-lg:w-8' src="whatsapp.svg" alt="whatsapp" />
+            <img className='w-7 max-lg:w-8 select-none' src="whatsapp.svg" alt="whatsapp" />
           </div>
         </div>
       </div>

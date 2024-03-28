@@ -11,7 +11,7 @@ const Footer = (props: { toggleModalGo: any, toggleModalMenu: any }) => {
         <div className='h-[22.75px] max-lg:h-[113.75px] max-sm:h-[149.5px]'></div>
       </div>
       <div className='h-auto max-sm:h-auto w-full bg-black fixed bottom-0 z-0 max-lg:pb-4 text-white flex flex-col gap-24 justify-between items-center'>
-        <div className='w-full overflow-hidden lg:-mb-6 pt-16'>
+        <div className='w-full overflow-hidden lg:-mb-6 pt-16 select-none'>
           <motion.div 
             initial={{ x: '-20%' }}
             animate={{ x: 0 }}

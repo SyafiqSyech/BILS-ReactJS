@@ -18,12 +18,12 @@ const Carousel = () => {
           className='flex gap-12 max-md:gap-8 justify-between w-max px-6 max-md:px-2'
         >
           {carousel.map((c, i) => (
-            <div className='rounded-[2rem] overflow-hidden w-[max(25vw,40svh)] max-lg:w-[max(25vw,30svh)] aspect-square shad' key={i}>
+            <div className='rounded-[2rem] overflow-hidden w-[max(25vw,40svh)] max-lg:w-[max(25vw,30svh)] aspect-square shad select-none' key={i}>
               <img className=' w-full h-full object-cover' src={ c } alt="poster" />
             </div>
           ))}
           {carousel.map((c, i) => (
-            <div className='rounded-[2rem] overflow-hidden w-[max(25vw,40svh)] max-lg:w-[max(25vw,30svh)] aspect-square shad' key={i}>
+            <div className='rounded-[2rem] overflow-hidden w-[max(25vw,40svh)] max-lg:w-[max(25vw,30svh)] aspect-square shad select-none' key={i}>
               <img className=' w-full h-full object-cover' src={ c } alt="poster" />
             </div>
           ))}

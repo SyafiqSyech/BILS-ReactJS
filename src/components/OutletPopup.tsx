@@ -32,7 +32,7 @@ const OutletPopup = (props: {toggleModal: any, link: any}) => {
           exit={{ scale: .8, opacity:0, transition: { ease: 'easeOut', duration:.1} }}
           className='max-w-[88rem] min-h-96 bg-white rounded-[4rem] relative p-16 max-lg:p-8 max-sm:pt-16'
         >
-          <span className="material-symbols-outlined absolute cursor-pointer right-10 top-10" onClick={ props.toggleModal }>close</span>
+          <span className="material-symbols-outlined absolute cursor-pointer right-10 top-10 select-none" onClick={ props.toggleModal }>close</span>
           <p className='txt1 text-center pb-16 max-lg:pt-8 max-md:pb-8 max-sm:pt-0'>Pick a location</p>
           <div className=''>
             <div className='flex flex-wrap gap-x-8 max-md:gap-x-4 gap-y-16 max-sm:gap-y-8 justify-center'>
